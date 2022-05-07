@@ -33,7 +33,6 @@ router.route("/").post((req, res) => {
   const roomName = req.body.roomname;
   const roomID = req.body.roomid;
   const roomTime = req.body.time;
-  const roomSlot = req.body.slot;
   const roomDate = req.body.date;
   const userEmail = req.body.email;
 
@@ -46,24 +45,37 @@ router.route("/").post((req, res) => {
   const bookingList = readBookings();
   let tempList = bookingList;
 
-  const listToUpdate = bookingList.filter((room) => {
+  let listToUpdate = bookingList.filter((room) => {
     return room.roomid === roomID && room.date === roomDate;
   });
 
   if (listToUpdate.length !== 1) {
     res.status(400).send("Enter valid room information");
   } else {
-    const finalList = tempList.forEach((room) => {
-      console.log(room.roomSlot);
-      if (room.roomSlot === roomSlot && room.date === roomDate) {
-        return room.roomSlot.useradded.push(userEmail);
+    let updatedbooking = listToUpdate[0].booking;
+
+    const updatedFinalList = updatedbooking.filter((time) => {
+      if (time.timeperiod === roomTime) {
+        let updatedUserAddedList = time.useradded;
+        updatedUserAddedList.unshift(userEmail);
+        updatedUserAddedList = {
+          timeperiod: time.timeperiod,
+          useradded: updatedUserAddedList,
+        };
+
+        return updatedUserAddedList;
       } else {
-        return room;
+        return time;
       }
     });
-    res.status(200).send(finalList);
+
+    //tempList[booking] = updatedFinalList;
+
+    writeBookings(tempList);
+
+    res.status(200).send(tempList);
+
     console.log("booking completed successfully");
-    console.log(finalList);
   }
 });
 

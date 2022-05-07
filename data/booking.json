@@ -9,23 +9,23 @@
         "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
       },
       {
-        "timeperiod": "8AM to 10AM",
+        "timeperiod": "10AM to 12PM",
         "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
       },
       {
-        "timeperiod": "8AM to 10AM",
+        "timeperiod": "12PM to 2PM",
+        "useradded": ["rrrr@yahoo.com", "xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "2PM to 4PM",
         "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
       },
       {
-        "timeperiod": "8AM to 10AM",
+        "timeperiod": "4PM to 6PM",
         "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
       },
       {
-        "timeperiod": "8AM to 10AM",
-        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
-      },
-      {
-        "timeperiod": "8AM to 10AM",
+        "timeperiod": "6PM to 8PM",
         "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
       }
     ]
@@ -37,26 +37,26 @@
     "booking": [
       {
         "timeperiod": "8AM to 10AM",
+        "useradded": ["tttt@yahoo.com", "xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "10AM to 12PM",
         "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
       },
       {
-        "timeperiod": "8AM to 10AM",
+        "timeperiod": "12PM to 2PM",
         "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
       },
       {
-        "timeperiod": "8AM to 10AM",
+        "timeperiod": "2PM to 4PM",
         "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
       },
       {
-        "timeperiod": "8AM to 10AM",
+        "timeperiod": "4PM to 6PM",
         "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
       },
       {
-        "timeperiod": "8AM to 10AM",
-        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
-      },
-      {
-        "timeperiod": "8AM to 10AM",
+        "timeperiod": "6PM to 8PM",
         "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
       }
     ]
