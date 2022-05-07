@@ -1,0 +1,64 @@
+[
+  {
+    "roomname": "clara",
+    "roomid": "1111",
+    "date": "01/02/2022",
+    "booking": [
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      }
+    ]
+  },
+  {
+    "roomname": "mars",
+    "roomid": "1112",
+    "date": "01/02/2022",
+    "booking": [
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      },
+      {
+        "timeperiod": "8AM to 10AM",
+        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+      }
+    ]
+  }
+]
