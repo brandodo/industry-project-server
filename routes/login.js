@@ -22,15 +22,13 @@ function writeUsers(data) {
 router.route("/").post((req, res) => {
   const userlist = readUsers();
   const userListUpdated = userlist.find((user) => {
-    return (
-      req.body.userid === user.userid && req.body.password === user.password
-    );
+    return req.body.email === user.email && req.body.password === user.password;
   });
 
   userListUpdated
     ? (res.status(200).send(userListUpdated),
       console.log("Credentials Correct"))
-    : (res.status(400).send("User ID / Password Invalid"),
+    : (res.status(400).send("User Email / Password Invalid"),
       console.log("Credentials Invalid"));
 });
 

@@ -13,7 +13,7 @@ const login = require("./routes/login");
 app.use(cors());
 app.use(express.json());
 //app.use("/static", express.static("public"));
-app.use("/Login", login);
+app.use("/login", login);
 
 // Start the server listening
 // It's convention to have this at the end of the file

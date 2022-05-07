@@ -1,18 +1,38 @@
 [
   {
-    "userid": "4f99546f-069e-46a6-8cc0-9fe3790ecdb9",
-    "username": "Parthipan",
+    "email": "xxxx@yahoo.com",
+    "username": "test",
     "password": "1234",
-    "created": "2022-04-22T21:24:04-04:00",
-    "lastLogged": "2022-04-22T21:24:04-04:00",
-    "userAdded": [{ "userid": "", "username": "", "created": "" }]
+    "userInfo": [
+      {
+        "qrcodecolor": "Green",
+        "id": "4f99546f-069e-46a6-8cc0-9fe3790ecdb9",
+
+        "workspacebooking": [
+          {
+            "roomname": "clara",
+            "datebooked": "01/06/2022",
+            "starttime": "8:00AM",
+            "endtime": "10:00AM"
+          }
+        ],
+        "usertype": "Employee"
+      }
+    ]
   },
   {
-    "userid": "aadf1f3c-1a05-4901-8569-e366169dda12",
+    "userid": "yyyy@gmail.com",
     "username": "Jason",
     "password": "1235",
-    "created": "2022-04-09T17:41:51-04:00",
-    "lastLogged": "2022-04-09T17:41:51-04:00",
-    "userAdded": [{ "userid": "", "username": "", "created": "" }]
+
+    "userInfo": [
+      {
+        "qrcodecolor": "Red",
+        "id": "aadf1f3c-1a05-4901-8569-e366169dda12",
+        "created": "",
+        "workspacedetails": [],
+        "usertype": "Employer"
+      }
+    ]
   }
 ]
