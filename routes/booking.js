@@ -120,18 +120,20 @@ router.route("/event").post((req, res) => {
   const userEmail = req.body.email;
   const eventName = req.body.eventname;
 
-  const userFinal = userList.filter((user) => {
+  let selectedUserList = userList.filter((user) => {
     if (user.email === userEmail) {
-      const obj = { ...user, event: eventName };
-      //console.log(obj);
-      return obj;
+      let updatedEvent = user;
+
+      updatedEvent.event.push(eventName);
+      return updatedEvent;
     } else {
       return user;
     }
   });
-  res.status(200).send(userFinal);
-  console.log("user list updated with event info");
-  console.log(userFinal[0].event);
+
+  console.log(selectedUserList);
+  res.status(200).send(selectedUserList);
+  writeUsers(selectedUserList);
 });
 
 module.exports = router;

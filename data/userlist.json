@@ -7,25 +7,22 @@
       {
         "qrcodecolor": "Green",
         "id": "4f99546f-069e-46a6-8cc0-9fe3790ecdb9",
-
         "usertype": "Employee"
       }
     ],
-    "event": [{ "name": "" }]
+    "event": ["greatest event", "great event"]
   },
   {
-    "userid": "yyyy@gmail.com",
+    "email": "yyyy@gmail.com",
     "username": "Jason",
     "password": "1235",
-
     "userInfo": [
       {
         "qrcodecolor": "Red",
         "id": "aadf1f3c-1a05-4901-8569-e366169dda12",
-
         "usertype": "Employer"
       }
     ],
-    "event": [{ "name": "" }]
+    "event": []
   }
 ]
