@@ -32,4 +32,35 @@ router.route("/").post((req, res) => {
       console.log("Credentials Invalid"));
 });
 
+//Update qrcode color put request send qr code value along with email and username
+
+router.route("/qrcode").put((req, res) => {
+  const userEmail = req.body.email;
+  const qrcode = req.body.qrcode;
+  const username = req.body.username;
+  let updateFlag = false;
+
+  const userlist = readUsers();
+
+  const finalList = userlist.filter((userinfos) => {
+    if (userinfos.email === userEmail && userinfos.username === username) {
+      updateFlag = true;
+
+      let userInfoUpdated = userinfos.userInfo;
+      userInfoUpdated[0].qrcodecolor = qrcode;
+      return { userinfos, userInfo: userInfoUpdated };
+    } else {
+      return userinfos;
+    }
+  });
+  if (updateFlag) {
+    res.status(200).send(finalList);
+    writeUsers(finalList);
+    console.log("qr code updated");
+  } else {
+    res.status(400).send("No valid entry found");
+    console.log("qr code update request failed");
+  }
+});
+
 module.exports = router;
