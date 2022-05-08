@@ -43,7 +43,7 @@ router.route("/qrcode").put((req, res) => {
   const userlist = readUsers();
 
   const finalList = userlist.filter((userinfos) => {
-    if (userinfos.email === userEmail && userinfos.username === username) {
+    if (userinfos.userid === userEmail && userinfos.username === username) {
       updateFlag = true;
 
       let userInfoUpdated = userinfos.userInfo;
@@ -53,6 +53,7 @@ router.route("/qrcode").put((req, res) => {
       return userinfos;
     }
   });
+
   if (updateFlag) {
     res.status(200).send(finalList);
     writeUsers(finalList);
