@@ -11,13 +11,12 @@
         "usertype": "Employee"
       }
     ],
-    "event": [{ "name": "" }]
+    "event": ["greatest event", "great event"]
   },
   {
     "userid": "yyyy@gmail.com",
     "username": "Yibo",
     "password": "1235",
-
     "userInfo": [
       {
         "qrcodecolor": "warning",
@@ -26,6 +25,6 @@
         "usertype": "Employer"
       }
     ],
-    "event": [{ "name": "" }]
+    "event": ["great event"]
   }
 ]

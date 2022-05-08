@@ -1,5 +1,29 @@
 [
   {
+    "roomname": "mars",
+    "roomid": "1112",
+    "date": "01/09/2022",
+    "booking": [
+      { "timeperiod": "10AM to 12PM", "useradded": ["rrrr@yahoo.com"] },
+      { "timeperiod": "8AM to 10AM", "useradded": [] },
+      { "timeperiod": "12PM to 2PM", "useradded": [] },
+      { "timeperiod": "2PM to 4PM", "useradded": ["mmmm@yahoo.com"] },
+      { "timeperiod": "4PM to 6PM", "useradded": [] },
+      { "timeperiod": "6PM to 8PM", "useradded": [] }
+    ]
+  },
+  {
+    "roomname": "mars",
+    "roomid": "1112",
+    "date": "01/08/2022",
+    "booking": [
+      {
+        "timeperiod": "2PM to 4PM",
+        "useradded": ["rrrr@yahoo.com", "xxxx.yahoo.com"]
+      }
+    ]
+  },
+  {
     "roomname": "clara",
     "roomid": "1111",
     "date": "01/02/2022",
