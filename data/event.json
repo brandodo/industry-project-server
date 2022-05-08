@@ -1,0 +1,18 @@
+[
+  {
+    "eventinfo": {
+      "name": "great event",
+      "date": "05/09/2023",
+      "time": "09:30PM to 12:00AM",
+      "location": "toronto"
+    }
+  },
+  {
+    "eventinfo": {
+      "name": "greatest event",
+      "date": "05/06/2023",
+      "time": "09:30PM to 12:00AM",
+      "location": "new york"
+    }
+  }
+]

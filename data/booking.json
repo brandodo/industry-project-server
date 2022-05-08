@@ -10,7 +10,12 @@
       },
       {
         "timeperiod": "10AM to 12PM",
-        "useradded": ["lkjh@yahoo.com", "xxxx.yahoo.com", "yyyy.gmail.com"]
+        "useradded": [
+          "parthi@gmail.com",
+          "lkjh@yahoo.com",
+          "xxxx.yahoo.com",
+          "yyyy.gmail.com"
+        ]
       },
       {
         "timeperiod": "12PM to 2PM",
@@ -26,7 +31,7 @@
       },
       {
         "timeperiod": "6PM to 8PM",
-        "useradded": ["xxxx.yahoo.com", "yyyy.gmail.com"]
+        "useradded": ["parthi@gmail.com", "xxxx.yahoo.com", "yyyy.gmail.com"]
       }
     ]
   },

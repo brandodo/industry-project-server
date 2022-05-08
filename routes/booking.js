@@ -18,6 +18,27 @@ function writeBookings(data) {
   fs.writeFileSync("./data/booking.json", JSON.stringify(data));
 }
 
+//Read File
+
+function readUsers() {
+  const userData = fs.readFileSync("./data/userlist.json");
+  const parsedData = JSON.parse(userData);
+  return parsedData;
+}
+
+//read events
+
+function readEvents() {
+  const userData = fs.readFileSync("./data/event.json");
+  const parsedData = JSON.parse(userData);
+  return parsedData;
+}
+
+//Write File
+function writeUsers(data) {
+  fs.writeFileSync("./data/userlist.json", JSON.stringify(data));
+}
+
 //get list of available bookings
 
 router.route("/").get((req, res) => {
@@ -69,14 +90,48 @@ router.route("/").post((req, res) => {
       }
     });
 
-    //tempList[booking] = updatedFinalList;
+    const finalList = tempList.filter((room) => {
+      if (room.roomid === roomID && room.date === roomDate) {
+        return { ...bookingList, booking: updatedFinalList };
+      } else {
+        return room;
+      }
+    });
 
-    writeBookings(tempList);
+    writeBookings(finalList);
 
-    res.status(200).send(tempList);
+    res.status(200).send(finalList);
 
     console.log("booking completed successfully");
   }
+});
+
+//event details get call
+router.route("/event").get((req, res) => {
+  const eventList = readEvents();
+
+  res.status(200).send(eventList);
+  console.log("event list sent");
+});
+//event details post user call
+
+router.route("/event").post((req, res) => {
+  const userList = readUsers();
+  const userEmail = req.body.email;
+  const eventName = req.body.eventname;
+
+  const userFinal = userList.filter((user) => {
+    if (user.email === userEmail) {
+      const obj = { ...user, event: eventName };
+      //console.log(obj);
+      return obj;
+    } else {
+      return user;
+    }
+  });
+  res.status(200).send(userFinal);
+  console.log("user list updated with event info");
+  console.log(userFinal[0].event);
 });
 
 module.exports = router;
