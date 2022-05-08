@@ -1,13 +1,13 @@
 [
   {
-    "email": "xxxx@yahoo.com",
-    "username": "test",
+    "email": "dave@yahoo.com",
+    "username": "Dave",
     "password": "1234",
     "userInfo": [
       {
-        "qrcodecolor": "Green",
+        "qrcodecolor": "warning",
         "id": "4f99546f-069e-46a6-8cc0-9fe3790ecdb9",
-
+        "date": "2022-MAY-02",
         "usertype": "Employee"
       }
     ],
@@ -15,14 +15,14 @@
   },
   {
     "userid": "yyyy@gmail.com",
-    "username": "Jason",
+    "username": "Yibo",
     "password": "1235",
 
     "userInfo": [
       {
-        "qrcodecolor": "Red",
+        "qrcodecolor": "warning",
         "id": "aadf1f3c-1a05-4901-8569-e366169dda12",
-
+        "date": "2022-JAN-01",
         "usertype": "Employer"
       }
     ],
