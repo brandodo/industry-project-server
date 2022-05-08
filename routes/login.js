@@ -41,12 +41,13 @@ router.route("/qrcode").put((req, res) => {
   let updateFlag = false;
 
   const userlist = readUsers();
+  let userInfoUpdated = null;
 
   const finalList = userlist.filter((userinfos) => {
     if (userinfos.userid === userEmail && userinfos.username === username) {
       updateFlag = true;
 
-      let userInfoUpdated = userinfos.userInfo;
+      userInfoUpdated = userinfos.userInfo;
       userInfoUpdated[0].qrcodecolor = qrcode;
       return { userinfos, userInfo: userInfoUpdated };
     } else {
@@ -55,7 +56,7 @@ router.route("/qrcode").put((req, res) => {
   });
 
   if (updateFlag) {
-    res.status(200).send(finalList);
+    res.status(200).send(userInfoUpdated);
     writeUsers(finalList);
     console.log("qr code updated");
   } else {
