@@ -63,6 +63,13 @@ router.route("/").post((req, res) => {
     date: roomDate,
   };
 
+  const newRoomEntry = {
+    roomname: roomName,
+    roomid: roomID,
+    date: roomDate,
+    booking: [],
+  };
+
   const bookingList = readBookings();
   let tempList = bookingList;
 
@@ -71,7 +78,15 @@ router.route("/").post((req, res) => {
   });
 
   if (listToUpdate.length !== 1) {
-    res.status(400).send("Enter valid room information");
+    let updatedRoomObject = newRoomEntry;
+    updatedRoomObject.booking.push({
+      timeperiod: roomTime,
+      useradded: [userEmail],
+    });
+
+    tempList.unshift(updatedRoomObject);
+    res.status(200).send(tempList);
+    writeBookings(tempList);
   } else {
     let updatedbooking = listToUpdate[0].booking;
 
@@ -119,21 +134,29 @@ router.route("/event").post((req, res) => {
   const userList = readUsers();
   const userEmail = req.body.email;
   const eventName = req.body.eventname;
+  let updateFlag = false;
 
   let selectedUserList = userList.filter((user) => {
     if (user.email === userEmail) {
       let updatedEvent = user;
 
       updatedEvent.event.push(eventName);
+      updateFlag = true;
       return updatedEvent;
     } else {
       return user;
     }
   });
 
-  console.log(selectedUserList);
-  res.status(200).send(selectedUserList);
-  writeUsers(selectedUserList);
+  if (updateFlag) {
+    res.status(200).send(selectedUserList);
+    writeUsers(selectedUserList);
+    console.log("posted event details to userlist info");
+  } else {
+    res.status(400).send("Enter valid information - no match found");
+
+    console.log("posted event details to userlist call failed");
+  }
 });
 
 module.exports = router;

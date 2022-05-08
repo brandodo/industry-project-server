@@ -1,5 +1,16 @@
 [
   {
+    "roomname": "mars",
+    "roomid": "1112",
+    "date": "01/08/2022",
+    "booking": [
+      {
+        "timeperiod": "2PM to 4PM",
+        "useradded": ["rrrr@yahoo.com", "xxxx.yahoo.com"]
+      }
+    ]
+  },
+  {
     "roomname": "clara",
     "roomid": "1111",
     "date": "01/02/2022",
