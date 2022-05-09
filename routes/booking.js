@@ -98,6 +98,7 @@ router.route("/").post((req, res) => {
   ];
   const bookingList = readBookings();
   let tempList = bookingList;
+  let updatedListExisting = null;
 
   let listToUpdate = bookingList.filter((room) => {
     return room.roomid === roomID && room.date === roomDate;
@@ -140,7 +141,9 @@ router.route("/").post((req, res) => {
 
     const finalList = tempList.filter((room) => {
       if (room.roomid === roomID && room.date === roomDate) {
-        return { ...bookingList, booking: updatedFinalList };
+        //updatedListExisting = { ...bookingList, booking: updatedFinalList };
+        updatedListExisting = { ...room, booking: updatedFinalList };
+        return { ...room, booking: updatedFinalList };
       } else {
         return room;
       }
@@ -148,7 +151,7 @@ router.route("/").post((req, res) => {
 
     writeBookings(finalList);
 
-    res.status(200).send(finalList);
+    res.status(200).send(updatedListExisting);
 
     console.log("booking completed successfully");
   }
