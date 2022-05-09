@@ -118,7 +118,7 @@ router.route("/").post((req, res) => {
     });
 
     tempList.unshift(updatedRoomObject);
-    res.status(200).send(tempList);
+    res.status(200).send(updatedRoomObject);
     writeBookings(tempList);
   } else {
     let updatedbooking = listToUpdate[0].booking;

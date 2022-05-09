@@ -1,18 +1,50 @@
 [
   {
     "eventinfo": {
-      "name": "great event",
+      "name": "Pancake Friday",
       "date": "05/09/2023",
-      "time": "09:30PM to 12:00AM",
-      "location": "toronto"
+      "time": "10AM-1PM",
+      "location": "Red Room",
+      "imageSmall": "pancakeSquare.jpg",
+      "imageLarge": "pancake.jpg"
     }
   },
   {
     "eventinfo": {
-      "name": "greatest event",
+      "name": "Online Therapy",
       "date": "05/06/2023",
-      "time": "09:30PM to 12:00AM",
-      "location": "new york"
+      "time": "9PM-12AM",
+      "location": "Green Room",
+      "imageSmall": "cafeSquare.jpg",
+      "imageLarge": "cafe.jpg"
+    }
+  },
+  {
+    "eventinfo": {
+      "name": "Steve's BDay",
+      "date": "05/06/2023",
+      "time": "9PM-12AM",
+      "location": "Yellow Room",
+      "imageSmall": "cakeSquare.jpg",
+      "imageLarge": "cake.jpg"
+    }
+  },
+  {
+    "eventinfo": {
+      "name": "Morning Yoga",
+      "date": "05/06/2022",
+      "time": "8AM-10AM",
+      "location": "Pink Room",
+      "imageLarge": "yoga.jpg"
+    }
+  },
+  {
+    "eventinfo": {
+      "name": "Beer Tasting",
+      "date": "01/03/2022",
+      "time": "5PM-7PM",
+      "location": "Yellow Room",
+      "imageLarge": "drinks.jpg"
     }
   }
 ]
