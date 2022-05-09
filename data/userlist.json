@@ -1,6 +1,6 @@
 [
   {
-    "userid": "dave@yahoo.com",
+    "email": "dave@yahoo.com",
     "username": "Dave",
     "password": "1234",
     "userInfo": [
@@ -14,7 +14,7 @@
     "event": ["greatest event", "great event"]
   },
   {
-    "userid": "yyyy@gmail.com",
+    "email": "yyyy@gmail.com",
     "username": "Yibo",
     "password": "1235",
     "userInfo": [
