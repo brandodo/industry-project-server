@@ -28,6 +28,45 @@
         "imageSmall": "cafeSquare.jpg",
         "imageLarge": "cafe.jpg"
       }
+    ],
+    "booking": [
+      {
+        "roomname": "red",
+        "roomid": "2000",
+        "date": "01/09/2022",
+        "booking": [
+          { "timeperiod": "2PM to 4PM", "useradded": [] },
+          { "timeperiod": "8AM to 10AM", "useradded": ["dave@yahoo.com"] },
+          { "timeperiod": "10AM to 12PM", "useradded": [] },
+          { "timeperiod": "12PM to 2PM", "useradded": [] },
+          { "timeperiod": "4PM to 6PM", "useradded": ["dave@yahoo.com"] },
+          { "timeperiod": "6PM to 8PM", "useradded": [] }
+        ]
+      },
+      {
+        "roomname": "red",
+        "roomid": "2000",
+        "date": "01/09/2022",
+        "booking": [
+          {
+            "timeperiod": "2PM to 4PM",
+            "useradded": [
+              "1111@yahoo.com",
+              "zzzz@yahoo.com",
+              "tttt@yahoo.com",
+              "rrrr@yahoo.com"
+            ]
+          },
+          {
+            "timeperiod": "8AM to 10AM",
+            "useradded": ["dave@yahoo.com", "1111@yahoo.com"]
+          },
+          { "timeperiod": "10AM to 12PM", "useradded": [] },
+          { "timeperiod": "12PM to 2PM", "useradded": [] },
+          { "timeperiod": "4PM to 6PM", "useradded": [] },
+          { "timeperiod": "6PM to 8PM", "useradded": [] }
+        ]
+      }
     ]
   },
   {
@@ -42,6 +81,7 @@
         "usertype": "Employer"
       }
     ],
-    "event": []
+    "event": [],
+    "booking": []
   }
 ]

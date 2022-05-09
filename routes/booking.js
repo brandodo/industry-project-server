@@ -56,6 +56,12 @@ router.route("/").post((req, res) => {
   const roomTime = req.body.time;
   const roomDate = req.body.date;
   const userEmail = req.body.email;
+  const bookingList = readBookings();
+  const users = readUsers();
+
+  let tempList = bookingList;
+  let updatedListExisting = null;
+  let userBookingInfo = null;
 
   const roomObject = {
     roomname: roomName,
@@ -96,9 +102,10 @@ router.route("/").post((req, res) => {
       useradded: [],
     },
   ];
-  const bookingList = readBookings();
-  let tempList = bookingList;
-  let updatedListExisting = null;
+
+  const userInfoSent = users.filter((user) => {
+    return user.email === userEmail;
+  });
 
   let listToUpdate = bookingList.filter((room) => {
     return room.roomid === roomID && room.date === roomDate;
@@ -119,8 +126,20 @@ router.route("/").post((req, res) => {
     });
 
     tempList.unshift(updatedRoomObject);
+    userBookingInfo = updatedRoomObject;
     res.status(200).send(updatedRoomObject);
     writeBookings(tempList);
+    const updatedUserListWrite = users.filter((user) => {
+      if (user.email === userEmail) {
+        let bookingPush = user.booking;
+        bookingPush.unshift(userBookingInfo);
+
+        return { user, booking: bookingPush };
+      } else {
+        return user;
+      }
+    });
+    writeUsers(updatedUserListWrite);
   } else {
     let updatedbooking = listToUpdate[0].booking;
 
@@ -152,6 +171,18 @@ router.route("/").post((req, res) => {
     writeBookings(finalList);
 
     res.status(200).send(updatedListExisting);
+    userBookingInfo = updatedListExisting;
+    const updatedUserListWrite = users.filter((user) => {
+      if (user.email === userEmail) {
+        let bookingPush = user.booking;
+        bookingPush.unshift(userBookingInfo);
+
+        return { user, booking: bookingPush };
+      } else {
+        return user;
+      }
+    });
+    writeUsers(updatedUserListWrite);
 
     console.log("booking completed successfully");
   }
