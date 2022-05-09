@@ -165,15 +165,22 @@ router.route("/event").get((req, res) => {
 
 router.route("/event").post((req, res) => {
   const userList = readUsers();
+  const events = readEvents();
   const userEmail = req.body.email;
   const eventName = req.body.eventname;
   let updateFlag = false;
+  let updatedValueReturn = null;
 
+  const selectedEvent = events.filter((event) => {
+    return event.eventinfo.name === eventName;
+  });
+  console.log(selectedEvent);
   let selectedUserList = userList.filter((user) => {
     if (user.email === userEmail) {
       let updatedEvent = user;
 
-      updatedEvent.event.push(eventName);
+      updatedEvent.event.push(selectedEvent[0].eventinfo);
+      updatedValueReturn = updatedEvent;
       updateFlag = true;
       return updatedEvent;
     } else {
@@ -182,7 +189,7 @@ router.route("/event").post((req, res) => {
   });
 
   if (updateFlag) {
-    res.status(200).send(selectedUserList);
+    res.status(200).send(updatedValueReturn);
     writeUsers(selectedUserList);
     console.log("posted event details to userlist info");
   } else {

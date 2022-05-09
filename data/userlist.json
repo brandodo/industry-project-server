@@ -11,7 +11,24 @@
         "usertype": "Employee"
       }
     ],
-    "event": ["greatest event", "great event"]
+    "event": [
+      {
+        "name": "Pancake Friday",
+        "date": "05/09/2023",
+        "time": "10AM-1PM",
+        "location": "Red Room",
+        "imageSmall": "pancakeSquare.jpg",
+        "imageLarge": "pancake.jpg"
+      },
+      {
+        "name": "Online Therapy",
+        "date": "05/06/2023",
+        "time": "9PM-12AM",
+        "location": "Green Room",
+        "imageSmall": "cafeSquare.jpg",
+        "imageLarge": "cafe.jpg"
+      }
+    ]
   },
   {
     "email": "yyyy@gmail.com",
@@ -25,6 +42,6 @@
         "usertype": "Employer"
       }
     ],
-    "event": ["great event"]
+    "event": []
   }
 ]
