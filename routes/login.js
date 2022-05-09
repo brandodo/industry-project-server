@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require("fs");
 const { v4 } = require("uuid");
 require("dotenv").config();
-const { PORT, BACKEND_URL } = process.env;
+const moment = require("moment");
 
 //Read File
 
@@ -42,13 +42,16 @@ router.route("/qrcode").put((req, res) => {
 
   const userlist = readUsers();
   let userInfoUpdated = null;
+  let user;
 
   const finalList = userlist.filter((userinfos) => {
     if (userinfos.userid === userEmail && userinfos.username === username) {
       updateFlag = true;
 
-      userInfoUpdated = userinfos.userInfo;
+      user = userinfos;
+      userInfoUpdated = user.userInfo;
       userInfoUpdated[0].qrcodecolor = qrcode;
+      userInfoUpdated[0].date = moment().format("YYYY-MMM-DD");
       return { userinfos, userInfo: userInfoUpdated };
     } else {
       return userinfos;
@@ -56,7 +59,7 @@ router.route("/qrcode").put((req, res) => {
   });
 
   if (updateFlag) {
-    res.status(200).send(userInfoUpdated);
+    res.status(200).send(user);
     writeUsers(finalList);
     console.log("qr code updated");
   } else {
