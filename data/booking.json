@@ -1,5 +1,35 @@
 [
   {
+    "roomname": "red",
+    "roomid": "1",
+    "date": "2022-MAY-10",
+    "booking": [
+      {
+        "timeperiod": "8AM-10AM",
+        "useradded": [
+          "yyyy@gmail.com",
+          "yyyy@gmail.com",
+          "yyyy@gmail.com",
+          "yyyy@gmail.com",
+          "yyyy@gmail.com",
+          "yyyy@gmail.com",
+          "yyyy@gmail.com",
+          "yyyy@gmail.com",
+          "yyyy@gmail.com",
+          "yyyy@gmail.com",
+          "yyyy@gmail.com",
+          "yyyy@gmail.com"
+        ]
+      },
+      { "timeperiod": "8AM to 10AM", "useradded": [] },
+      { "timeperiod": "10AM to 12PM", "useradded": [] },
+      { "timeperiod": "12PM to 2PM", "useradded": [] },
+      { "timeperiod": "2PM to 4PM", "useradded": [] },
+      { "timeperiod": "4PM to 6PM", "useradded": [] },
+      { "timeperiod": "6PM to 8PM", "useradded": [] }
+    ]
+  },
+  {
     "roomname": "mars",
     "roomid": "1112",
     "date": "01/09/2022",

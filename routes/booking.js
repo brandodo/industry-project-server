@@ -165,7 +165,7 @@ router.route("/event").get((req, res) => {
 
 router.route("/event").post((req, res) => {
   const userList = readUsers();
-  const userEmail = req.body.email;
+  const userEmail = req.body.userid;
   const eventName = req.body.eventname;
   let updateFlag = false;
 

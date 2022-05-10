@@ -22,7 +22,9 @@ function writeUsers(data) {
 router.route("/").post((req, res) => {
   const userlist = readUsers();
   const userListUpdated = userlist.find((user) => {
-    return req.body.email === user.email && req.body.password === user.password;
+    return (
+      req.body.userid === user.userid && req.body.password === user.password
+    );
   });
 
   userListUpdated
