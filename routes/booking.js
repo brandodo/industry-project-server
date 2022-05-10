@@ -208,7 +208,7 @@ router.route("/event").post((req, res) => {
   const selectedEvent = events.filter((event) => {
     return event.eventinfo.name === eventName;
   });
-  console.log(selectedEvent);
+
   let selectedUserList = userList.filter((user) => {
     if (user.email === userEmail) {
       let updatedEvent = user;

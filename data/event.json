@@ -2,9 +2,10 @@
   {
     "eventinfo": {
       "name": "Pancake Friday",
-      "date": "05/09/2023",
+      "date": "Today",
       "time": "1PM-3PM",
       "location": "Red Room",
+      "description": "Come enjoy pancakes and coffee with your coworkers!",
       "imageSmall": "pancakeSquare.jpg",
       "imageLarge": "pancake.jpg"
     }
@@ -12,9 +13,10 @@
   {
     "eventinfo": {
       "name": "Online Therapy",
-      "date": "05/06/2023",
+      "date": "Today",
       "time": "9PM-12AM",
       "location": "Green Room",
+      "description": "Join a therapy session at the comfort of home or during a break at work!",
       "imageSmall": "cafeSquare.jpg",
       "imageLarge": "cafe.jpg"
     }
@@ -22,9 +24,10 @@
   {
     "eventinfo": {
       "name": "Steve's BDay",
-      "date": "05/06/2023",
+      "date": "Today",
       "time": "9PM-12AM",
       "location": "Yellow Room",
+      "description": "Our amazing Engineer Steve is turning 40, join for cake and some fun office activities!",
       "imageSmall": "cakeSquare.jpg",
       "imageLarge": "cake.jpg"
     }
@@ -32,18 +35,20 @@
   {
     "eventinfo": {
       "name": "Morning Yoga",
-      "date": "05/06/2022",
+      "date": "Today",
       "time": "8AM-10AM",
       "location": "Pink Room",
+      "description": "Start your day well, all yoga levels welcomed!",
       "imageLarge": "yoga.jpg"
     }
   },
   {
     "eventinfo": {
       "name": "Beer Tasting",
-      "date": "01/03/2022",
+      "date": "Today",
       "time": "5PM-7PM",
       "location": "Yellow Room",
+      "description": "Take a break and discover some new local beers with your coworkers!",
       "imageLarge": "drinks.jpg"
     }
   }

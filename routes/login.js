@@ -42,6 +42,8 @@ router.route("/qrcode").put((req, res) => {
   const username = req.body.username;
   let updateFlag = false;
 
+  console.log(userEmail, qrcode, username);
+
   const userlist = readUsers();
   let userInfoUpdated = null;
   let user;
