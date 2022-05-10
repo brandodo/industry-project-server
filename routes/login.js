@@ -6,7 +6,6 @@ require("dotenv").config();
 const moment = require("moment");
 
 //Read File
-
 function readUsers() {
   const userData = fs.readFileSync("./data/userlist.json");
   const parsedData = JSON.parse(userData);
@@ -28,21 +27,16 @@ router.route("/").post((req, res) => {
   });
 
   userListUpdated
-    ? (res.status(200).send(userListUpdated),
-      console.log("Credentials Correct"))
-    : (res.status(400).send("User Email / Password Invalid"),
-      console.log("Credentials Invalid"));
+    ? res.status(200).send(userListUpdated)
+    : res.status(400).send("User Email / Password Invalid");
 });
 
 //Update qrcode color put request send qr code value along with email and username
-
 router.route("/qrcode").put((req, res) => {
   const userEmail = req.body.email;
   const qrcode = req.body.qrcode;
   const username = req.body.username;
   let updateFlag = false;
-
-  console.log(userEmail, qrcode, username);
 
   const userlist = readUsers();
   let userInfoUpdated = null;
@@ -65,10 +59,8 @@ router.route("/qrcode").put((req, res) => {
   if (updateFlag) {
     res.status(200).send(user);
     writeUsers(finalList);
-    console.log("qr code updated");
   } else {
     res.status(400).send("No valid entry found");
-    console.log("qr code update request failed");
   }
 });
 

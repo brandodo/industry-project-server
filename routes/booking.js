@@ -19,7 +19,6 @@ function writeBookings(data) {
 }
 
 //Read File
-
 function readUsers() {
   const userData = fs.readFileSync("./data/userlist.json");
   const parsedData = JSON.parse(userData);
@@ -40,16 +39,13 @@ function writeUsers(data) {
 }
 
 //get list of available bookings
-
 router.route("/").get((req, res) => {
   const bookingList = readBookings();
 
   res.status(200).send(bookingList);
-  console.log("Booking List Sent");
 });
 
 //book room for a specific slot , send useremail, roomid,time
-
 router.route("/").post((req, res) => {
   const roomName = req.body.roomname;
   const roomID = req.body.roomid;
@@ -183,8 +179,6 @@ router.route("/").post((req, res) => {
       }
     });
     writeUsers(updatedUserListWrite);
-
-    console.log("booking completed successfully");
   }
 });
 
@@ -193,10 +187,9 @@ router.route("/event").get((req, res) => {
   const eventList = readEvents();
 
   res.status(200).send(eventList);
-  console.log("event list sent");
 });
-//event details post user call
 
+//event details post user call
 router.route("/event").post((req, res) => {
   const userList = readUsers();
   const events = readEvents();
@@ -225,11 +218,8 @@ router.route("/event").post((req, res) => {
   if (updateFlag) {
     res.status(200).send(updatedValueReturn);
     writeUsers(selectedUserList);
-    console.log("posted event details to userlist info");
   } else {
     res.status(400).send("Enter valid information - no match found");
-
-    console.log("posted event details to userlist call failed");
   }
 });
 
