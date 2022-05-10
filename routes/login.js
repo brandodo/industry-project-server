@@ -47,7 +47,7 @@ router.route("/qrcode").put((req, res) => {
   let user;
 
   const finalList = userlist.filter((userinfos) => {
-    if (userinfos.userid === userEmail && userinfos.username === username) {
+    if (userinfos.email === userEmail && userinfos.username === username) {
       updateFlag = true;
 
       user = userinfos;
